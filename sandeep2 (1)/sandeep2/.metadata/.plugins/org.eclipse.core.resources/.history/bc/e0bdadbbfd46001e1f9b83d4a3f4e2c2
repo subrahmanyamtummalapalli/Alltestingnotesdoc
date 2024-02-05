@@ -1,0 +1,11 @@
+package TestnGTopics;
+
+public class DataProvider {
+	
+	@DataProvider
+	public Object[][] sandeep()
+	{
+		
+	}
+
+}	

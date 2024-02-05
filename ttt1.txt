@@ -1,0 +1,208 @@
+selesct dropdown =new slect
+alert a=driver.swtichTo.alert.accpect,dimess,getText
+String mainWindow=driver.getWindowHandle();
+Actions action=new Action(driver)
+actions.moveToElement
+
+File sc=(Taskes)driver.getsAS(optype.file)
+driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS)
+WebDriverWait wait = new WebDriverWait (driver, 20);
+wait.until(ExpectedConditions.VisibilityofElementLocated(By.xpath(""//button[@value='Save Changes']"")));
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+
+FileInputStream fis = new FileInputStream("D:\\Test.xlsx");
+XSSFWorkbook workbook = new XSSFWorkbook(fis);
+XSSFSheet sheet = workbook.getSheetAt(0);
+
+
+try {     conn =  DriverManager.getConnection("jdbc:mysql://localhost/test?" +"user=minty&password=greatsqldb");
+
+JavascriptExecutor js = (JavascriptExecutor) driver;  
+js.executeScript(Script,Arguments);
+
+@BeforeSuite.
+@BeforeTest.
+@BeforeClass.
+@BeforeMethod.
+@Test.
+@AfterMethod.
+@AfterClass.
+@AfterTest.
+Test (enabled=false)
+throw new SkipException()
+@Test (groups = { "smokeTest", "functionalTest" })estNG Groups allow you to perform groupings of different test methods.
+ required when you want to access the test methods of different classes.
+
+
+/ This method takes data as input parameters. The attribute dataprovider is mapped to "getData"
+@Test (dataProvider="getData")
+    // Number of columns should match the number of input parameters
+public void loginTest(String Uid, String Pwd){
+System.out.println("UserName is "+ Uid);
+System.out.println("Password is "+ Pwd);
+}
+//If the name is not supplied, the data provider’s name automatically defaults to the method’s name.
+//A data provider returns an array of objects.
+@DataProvider(name="getData")
+public Object[][] getData(){
+//Object [][] data = new Object [rowCount][colCount];
+Object [][] data = new Object [2][2];
+data [0][0] = "FirstUid";
+data [0][1] = "FirstPWD";
+data[1][0] = "SecondUid";
+data[1][1] = "SecondPWD";
+return data;
+}
+}
+
+<suite name="softwaretestingmaterial" parallel="methods" thread-count="2">
+Assert.assertEquals(String actual,String expected
+Assert.assertEquals(String actual,String expected, String message)
+Assert.assertTrue(condition)
+Assert.assertFalse(condition) 
+ Hard Assert throws an AssertException immediately when an assert statement fails and test suite continues with next @Test
+Soft Assert – Soft Assert collects errors during @Test. Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement.(verify method)
+Can you verify in test using Selenium?
+We can verify the color of a webelement in Selenium webdriver using the getCssValue method and then pass color as a parameter to it. This returnsthe color in rgba() format. Next, we have to use the class Color to convert the rgba() format to Hex.
+The main purpose of using listeners is to create logs
+ ITestListener
+
+https://www.guru99.com/usability-testing-tutorial.html
+ 
+@Test(priority = -1)
+
+Verification is the process, to ensure that whether we are building the product right
+Validation is the process, whether we are building the right product i.e
+
+
+
+Instance variables are those variables that are accessible by all the methods in the class. They are declared outside the methods and inside the class
+Local variables are those variables present within a block, function, or constructor and can be accessed only inside them
+Data Encapsulation is an Object-Oriented Programming concept of hiding the data attributes and their behaviours in a single unit.
+It is used for the security of the private properties of an object and hence serves the purpose of data hiding.
+Constructor overloading is the process of creating multiple constructors in the class consisting of the same name with a difference in the constructor parameters
+Copy Constructor is the constructor used when we want to initialize the value to the new object from the old object of the same class
+In Java, method overloading is made possible by introducing different methods in the same class consisting of the same name. 
+class OverloadingHelp {
+   public int findarea (int l, int b) {
+           int var1;
+           var1 = l * b;
+           return var1;
+   }
+   public int findarea (int l, int b, int h) {
+           int var2;
+           var2 = l * b * h;
+           return var2;
+   }
+}
+Method overriding is the concept in which two methods having the same method signature and paarametere same
+class HumanBeing {
+       public int walk (int distance, int time) {
+               int speed = distance / time;
+               return speed;
+       }
+}
+class Athlete extends HumanBeing {
+       public int walk(int distance, int time) {
+               int speed = distance / time;
+               speed = speed * 2;
+               return speed;
+       }
+final variable:
+When a variable is declared as final in Java, the value can’t be modified once it has been assigned.
+If any value has not been assigned to that variable, then it can be assigned only by the constructor of the class.
+final method:
+A method declared as final cannot be overridden by its children's classes.
+A constructor cannot be marked as final because whenever a class is inherited, the constructors are not inherited. Hence, marking it final doesn't make sense. Java throws compilation error saying - modifier final not allowed here
+final class:
+No classes can be inherited from the class declared as final. But that final class can extend other classes for its usage.
+Finally: It is the block present in a program where all the codes written inside it get executed irrespective of handling of exceptions. 
+Finalize: Prior to the garbage collection of an object, the finalize method is called so that the clean-up activity is implemented
+
+The super keyword is used to access hidden fields and overridden methods or attributes of the parent class.
+Accessing data members of parent class when the member names of the class and its child subclasses are same.
+To call the default and parameterized constructor of the parent class inside the child class.
+Accessing the parent class methods when the child classes have overridden them
+
+Shallow copy - The shallow copy only creates a new reference and points to the same object. 
+Deep Copy - In a deep copy, we create a new object and copy the old object value to the new object. Example -
+JDK- For making java programs, we need some tools that are provided by JDK (Java Development Kit). JDK is the package that contains various tools, Compiler, Java Runtime Environment, etc.
+JRE -  To execute the java program we need an environment. (Java Runtime Environment) JRE contains a library of Java classes +  JVM. What are JAVA Classes?  It contains some predefined methods that help Java programs to use that feature, build and execute. For example - there is a system class in java that contains the print-stream method, and with the help of this, we can print something on the console.
+JVM - (Java Virtual Machine) JVM  is a part of JRE that executes the Java program at the end.  Actually, it is part of JRE, but it is software that converts bytecode into machine-executable code to execute on hardware.
+
+
+Test plan 
+req trace martix
+Adoch testing
+SDLC,STLC,Agile
+
+public class ConcatExample2 {  
+    public static void main(String[] args) {      
+        String str1 = "Hello";  
+        String str2 = "Javatpoint";  
+        String str3 = "Reader";  
+        // Concatenating one string   
+        String str4 = str1.concat(str2);          
+        System.out.println(str4);  
+        // Concatenating multiple strings  
+        String str5 = str1.concat(str2).concat(str3);  
+        System.out.println(str5);  
+
+https://github.com/jayaramyedla/Seleniuem.git
+    }  
+}  
+
+use case testingS,tables in sele
+TestNG supports parallel execution using multiple threads in the class/methods/test level
+
+<suite name="My suite" parallel="methods" thread-count="5">
+
+<suite name="My suite" parallel="tests" thread-count="5">
+
+<suite name="My suite" parallel="classes" thread-count="5">
+
+<suite name="My suite" parallel="instances" thread-count="5">
+https://www.geeksforgeeks.org/acceptance-testing-software-testing/
+
+What is test strategy with examples?
+Test Strategy vs Test Plan
+Test Plan	Test Strategy
+A test plan for software project can be defined as a document that defines the scope, objective, approach and emphasis on a software testing effort	
+Test strategy is a set of guidelines that explains test design and determines how testing needs to be done
+
+Data Driven framework is used to drive test cases and suites from an external data feed. The data feed can be data sheets like xls, xlsx, and csv files.
+What is a test suite in testing?
+A test suite is a collection of test cases that are grouped for test execution purposes.
+A Test Scenario is defined as any functionality that can be tested. It is a collective set of test cases which helps the testing team to determine the positive and negative characteristics of the project.
+A Test Case is a set of actions executed to verify a particular feature or functionality of your software application. A Test Case contains test steps, test data, precondition, postcondition
+VERIFICATION: (Static Testing)
+ to verify the requirements which we have and to verify whether we are developing the product accordingly or not.
+VALIDATION: (Dynamic Testing)
+Validation is the process, whether we are building the right product i.e., to validate the product which we have developed is right or not.
+String str="Radar";
+reverseStr="";
+int StrLength=str.length();
+for(int i=(StrLength-1;i>0;--i)
+reverseStr=reversedStr+str.chartAt(i);
+if(str.toLowersCase.equals(reverseStr.toLowerscase())
+sop(str+"prld")
+else
+sop(str+"not prd")
+Abstraction is a process of hiding the implementation details and showing only functionality to the user. Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where you type the text and send the message.
+A WebElement represents an HTML elemen
+
+
+
+
+High Priority, Low Severity bug :- If the company name is misspelled in the home page of the website,then the priority is high and severity is low to fix it.
+
+High Severity, Low Priority :- Web page not found when user clicks on a link (user&#39;s does not visit that page generally)
+
+Low Priority, Low Severity :- Any cosmetic or spelling issues which is within a paragraph or in the report
+
+High Priority, High Severity :- An error which occurs on the basic functionality of the application and will not allow the user to use the system (E.g. user is not able to login to the application)

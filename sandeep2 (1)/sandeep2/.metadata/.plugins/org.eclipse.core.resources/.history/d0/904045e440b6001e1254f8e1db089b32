@@ -1,0 +1,25 @@
+package com.tutorialsNinja.implementation;
+
+import org.testng.annotations.Test;
+
+import com.tutorialsNinja.pageObjects.LoginPage;
+
+public class LoginPageImplementation extends BaseClass {
+
+    @Test
+    public void login() throws Exception {
+        LoginPage lg = new LoginPage(driver);
+        lg.ClickmyAccount(); // Ensure ClickmyAccount is called before interacting with the dropdown
+
+        // Assuming 'My Account' dropdown is located by its xpath
+//        WebElement myAccountDropdown = driver.findElement(By.xpath("//span[text()='My Account']/parent::li/child::ul"));
+//        
+//        Select se = new Select(myAccountDropdown);
+//        se.selectByIndex(1);
+          Thread.sleep(2000);
+        lg.clickLoginBtn();
+//        lg.getEmailText("sandeep1a@gmail.com");
+//        lg.getPwdText("sandeep1a");
+//        lg.clickLogin();
+    }
+}

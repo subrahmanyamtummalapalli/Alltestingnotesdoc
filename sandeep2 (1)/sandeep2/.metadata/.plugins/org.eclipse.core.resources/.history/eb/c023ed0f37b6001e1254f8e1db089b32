@@ -1,0 +1,28 @@
+package com.tutorialsNinja.implementation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+import com.tutorialsNinja.pageObjects.LoginPage;
+
+public class LoginPageImplementation extends BaseClass {
+	
+	@Test
+	public void login()
+	{
+		LoginPage lg=new LoginPage(driver);
+		//lg.ClickmyAccount();
+		WebElement ele=driver.findElement(By.xpath ( "//span[text()='My Account']"));
+		Select se=new Select(ele);
+		se.selectByIndex(1);//
+		//lg.clickLoginBtn();
+		lg.getEmailText("sandeep1a@gmail.com");
+		lg.getPwdText("sandeep1a");
+		lg.clickLogin();
+//		System.out.println("hello world");
+//		lg.maximize();
+	}
+
+}

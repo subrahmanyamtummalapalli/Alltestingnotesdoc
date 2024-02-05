@@ -1,0 +1,21 @@
+package forLoops;
+
+public class ReverseOfNum {
+	
+	public static void reverse()
+	{
+		for(int i=85;i>=65;i--)
+		{
+			if(i%2==0)
+			{
+			System.out.println(i);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		reverse();
+
+	}
+
+}

@@ -1,0 +1,281 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Aug 31 10:40:23 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (136 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestnGTopics.DataProvider1.login()'><b>login</b><br>Test class: TestnGTopics.DataProvider1<br>Parameters: sandeepvelpula@gmail.com, sandeep</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.DataProvider1@15bbf42f</td></tr>
+<tr>
+<td title='TestnGTopics.DataProvider1.login()'><b>login</b><br>Test class: TestnGTopics.DataProvider1<br>Parameters: sandeep@gmail.com, sandeep</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.DataProvider1@15bbf42f</td></tr>
+<tr>
+<td title='TestnGTopics.GroupExecution.sanity()'><b>sanity</b><br>Test class: TestnGTopics.GroupExecution<br/>
+<a href="#Output-1260972541" onClick='toggleBox("Output-1260972541", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1260972541" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1260972541">
+sanity<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.GroupExecution@550ee7e5</td></tr>
+<tr>
+<td title='TestnGTopics.GroupExecution.smoke()'><b>smoke</b><br>Test class: TestnGTopics.GroupExecution<br/>
+<a href="#Output-2057410452" onClick='toggleBox("Output-2057410452", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2057410452" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2057410452">
+smoke<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.GroupExecution@550ee7e5</td></tr>
+<tr>
+<td title='TestnGTopics.GroupExecution.smoke1()'><b>smoke1</b><br>Test class: TestnGTopics.GroupExecution<br/>
+<a href="#Output-2071188904" onClick='toggleBox("Output-2071188904", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2071188904" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2071188904">
+smoke1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.GroupExecution@550ee7e5</td></tr>
+<tr>
+<td title='TestnGTopics.Assertions.softAssert()'><b>softAssert</b><br>Test class: TestnGTopics.Assertions<br/>
+<a href="#Output-1122166941" onClick='toggleBox("Output-1122166941", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1122166941" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1122166941">
+soft<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.Assertions@247d8ae</td></tr>
+<tr>
+<td title='TestnGTopics.FlagsOfTestNG.test1()'><b>test1</b><br>Test class: TestnGTopics.FlagsOfTestNG<br/>
+<a href="#Output-1133456090" onClick='toggleBox("Output-1133456090", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1133456090" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1133456090">
+test1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.FlagsOfTestNG@5f9b2141</td></tr>
+<tr>
+<td title='TestnGTopics.AnnotationsOfTestNG.test1()'><b>test1</b><br>Test class: TestnGTopics.AnnotationsOfTestNG<br/>
+<a href="#Output-1563190597" onClick='toggleBox("Output-1563190597", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1563190597" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1563190597">
+test1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.AnnotationsOfTestNG@2dde1bff</td></tr>
+<tr>
+<td title='TestnGTopics.Assertions.test1()'><b>test1</b><br>Test class: TestnGTopics.Assertions<br/>
+<a href="#Output-2096120928" onClick='toggleBox("Output-2096120928", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2096120928" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2096120928">
+test1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.Assertions@247d8ae</td></tr>
+<tr>
+<td title='TestnGTopics.AnnotationsOfTestNG.test2()'><b>test2</b><br>Test class: TestnGTopics.AnnotationsOfTestNG<br/>
+<a href="#Output-1899910211" onClick='toggleBox("Output-1899910211", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1899910211" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1899910211">
+test2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.AnnotationsOfTestNG@2dde1bff</td></tr>
+<tr>
+<td title='TestnGTopics.Assertions.test2()'><b>test2</b><br>Test class: TestnGTopics.Assertions<br/>
+<a href="#Output-2102921839" onClick='toggleBox("Output-2102921839", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2102921839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2102921839">
+test2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.Assertions@247d8ae</td></tr>
+<tr>
+<td title='TestnGTopics.FlagsOfTestNG.test3()'><b>test3</b><br>Test class: TestnGTopics.FlagsOfTestNG<br/>
+<a href="#Output-1929730341" onClick='toggleBox("Output-1929730341", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1929730341" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1929730341">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.FlagsOfTestNG@5f9b2141</td></tr>
+<tr>
+<td title='TestnGTopics.FlagsOfTestNG.test3()'><b>test3</b><br>Test class: TestnGTopics.FlagsOfTestNG<br/>
+<a href="#Output-1466632738" onClick='toggleBox("Output-1466632738", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1466632738" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1466632738">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.FlagsOfTestNG@5f9b2141</td></tr>
+<tr>
+<td title='TestnGTopics.FlagsOfTestNG.test3()'><b>test3</b><br>Test class: TestnGTopics.FlagsOfTestNG<br/>
+<a href="#Output-754687272" onClick='toggleBox("Output-754687272", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-754687272" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-754687272">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.FlagsOfTestNG@5f9b2141</td></tr>
+<tr>
+<td title='TestnGTopics.FlagsOfTestNG.test3()'><b>test3</b><br>Test class: TestnGTopics.FlagsOfTestNG<br/>
+<a href="#Output-1949488328" onClick='toggleBox("Output-1949488328", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1949488328" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1949488328">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.FlagsOfTestNG@5f9b2141</td></tr>
+<tr>
+<td title='TestnGTopics.FlagsOfTestNG.test3()'><b>test3</b><br>Test class: TestnGTopics.FlagsOfTestNG<br/>
+<a href="#Output-765949722" onClick='toggleBox("Output-765949722", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-765949722" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-765949722">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.FlagsOfTestNG@5f9b2141</td></tr>
+<tr>
+<td title='TestnGTopics.Assertions.test3()'><b>test3</b><br>Test class: TestnGTopics.Assertions<br/>
+<a href="#Output-131203213" onClick='toggleBox("Output-131203213", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-131203213" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-131203213">
+test3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.Assertions@247d8ae</td></tr>
+<tr>
+<td title='TestnGTopics.FlagsOfTestNG.test4()'><b>test4</b><br>Test class: TestnGTopics.FlagsOfTestNG<br/>
+<a href="#Output-1383106849" onClick='toggleBox("Output-1383106849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1383106849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1383106849">
+test4<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestnGTopics.FlagsOfTestNG@5f9b2141</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+package FileUploadAndDownLoad;
+
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+
+import java.io.File;
+
+public class SingleFileUpload {
+	
+	@Test
+	public void singleFileUpload()
+	{
+		File f=new File("Downloads/AutomationTopics.rar");
+		
+		given()
+		.multiPart("file",f)
+		.contentType("multiPart/gorm-data")
+		
+		.when()
+		.post("https://localhost:8080/uploadFile")
+		.then()
+		.statusCode(201)
+		.log().all();
+	}
+
+}

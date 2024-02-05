@@ -1,0 +1,23 @@
+package TestnGTopics;
+
+import org.testng.annotations.DataProvider;
+
+public class DataProvider1 {
+	
+	@DataProvider
+	public Object[][] sandeep()
+	{
+		return new Object[][]
+				{
+			      {"sandeepvelpula@gmail.com","sandeep"},
+			      {"sandeep@gmail.com","sandeep"}
+				};
+	}
+	
+	public void login(String un, String pwd)
+	{
+		System.out.println(un);
+		System.out.println(pwd);
+	}
+
+}	

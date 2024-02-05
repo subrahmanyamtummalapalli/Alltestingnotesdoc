@@ -1,0 +1,29 @@
+package forLoops;
+
+public class NumPrimeOrNot {
+	static boolean status=true;
+	static int num=13;
+	public static void prime()
+	{
+		for(int i=1;i<=13;i++)
+		{
+		if(num%2==0)
+		{
+			status=false;
+			break;
+			
+		}
+		}
+		if(status==true)
+		{
+			System.out.println(num+"is a prime number");
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

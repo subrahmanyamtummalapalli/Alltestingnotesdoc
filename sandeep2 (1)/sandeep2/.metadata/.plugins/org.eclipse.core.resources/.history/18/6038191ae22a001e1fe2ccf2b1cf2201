@@ -1,0 +1,64 @@
+package com.oneAble.PageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.oneAble.TestCase.BaseClass;
+
+
+
+public class LoginPage {
+	
+	static WebDriver driver;
+	ReUsableMethods rm= new ReUsableMethods(driver);
+	public LoginPage(WebDriver rdriver)
+	{
+		driver=rdriver;
+		PageFactory.initElements(rdriver, this);
+	}
+	
+	@FindBy(xpath="//img[@class='dropdown-toggle w26 cursor-pointer']")
+	WebElement LanguageSelection;
+	
+	@FindBy(xpath="//span[text()='Japanese ']")
+	WebElement Japanese;
+	
+	@FindBy(xpath="//input[@class=\"form-control borderlg\" or @name=\"signin-email\"]")
+	WebElement TextUserName;
+	
+	@FindBy(xpath="//button[@class=\"btn bg_indgo text-white mt-4 px-4\" or name=\"emailSubmite\"]")
+	WebElement Button;
+	
+	@FindBy(xpath="//input[@class=\"form-control borderlg\" or name=\"userPassword\"]")
+	WebElement TextPassword;
+	
+	@FindBy(xpath="//button[@name=\"login-Button\" or text()='LOGIN']")
+	WebElement ButtonLogin;
+	
+	public void LanguageOption() throws Exception
+	{
+		rm.click(LanguageSelection);
+		
+		Thread.sleep(5000);
+		rm.click(Japanese);	
+		
+		
+	}
+	
+	public void LoginWithValidData(String uname, String pwd) throws Exception
+	{
+		rm.type(TextUserName, uname);
+		
+		Thread.sleep(2000);
+		rm.click(Button);
+		
+		Thread.sleep(2000);
+		rm.type(TextPassword, pwd);
+		
+		Thread.sleep(2000);
+		rm.click(ButtonLogin);
+		
+	}
+}

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="13" passed="11" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-19T09:57:08 IST" name="Command line suite" finished-at="2023-06-19T09:57:08 IST" duration-ms="50">
+    <groups>
+      <group name="Sanity Test">
+        <method signature="GroupsTest.test1()[pri:0, instance:TestNGPractice.GroupsTest@23348b5d]" name="test1" class="TestNGPractice.GroupsTest"/>
+        <method signature="GroupsTest.test2()[pri:0, instance:TestNGPractice.GroupsTest@23348b5d]" name="test2" class="TestNGPractice.GroupsTest"/>
+      </group> <!-- Sanity Test -->
+      <group name="Smoke Test">
+        <method signature="GroupsTest.test1()[pri:0, instance:TestNGPractice.GroupsTest@23348b5d]" name="test1" class="TestNGPractice.GroupsTest"/>
+      </group> <!-- Smoke Test -->
+    </groups>
+    <test started-at="2023-06-19T09:57:08 IST" name="Command line test" finished-at="2023-06-19T09:57:08 IST" duration-ms="50">
+      <class name="TestNGPractice.PriorityTest">
+        <test-method signature="c_method()[pri:1, instance:TestNGPractice.PriorityTest@7c9d8e2]" started-at="2023-06-19T09:57:08 IST" name="c_method" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- c_method -->
+        <test-method signature="a_method()[pri:3, instance:TestNGPractice.PriorityTest@7c9d8e2]" started-at="2023-06-19T09:57:08 IST" name="a_method" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- a_method -->
+        <test-method signature="d_method()[pri:2, instance:TestNGPractice.PriorityTest@7c9d8e2]" started-at="2023-06-19T09:57:08 IST" name="d_method" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- d_method -->
+        <test-method signature="e_method()[pri:4, instance:TestNGPractice.PriorityTest@7c9d8e2]" started-at="2023-06-19T09:57:08 IST" name="e_method" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- e_method -->
+        <test-method signature="b_method()[pri:5, instance:TestNGPractice.PriorityTest@7c9d8e2]" started-at="2023-06-19T09:57:08 IST" name="b_method" finished-at="2023-06-19T09:57:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- b_method -->
+      </class> <!-- TestNGPractice.PriorityTest -->
+      <class name="TestNGPractice.GroupsTest">
+        <test-method signature="test1()[pri:0, instance:TestNGPractice.GroupsTest@23348b5d]" started-at="2023-06-19T09:57:08 IST" name="test1" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:0, instance:TestNGPractice.GroupsTest@23348b5d]" started-at="2023-06-19T09:57:08 IST" name="test2" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+      </class> <!-- TestNGPractice.GroupsTest -->
+      <class name="TestNGPractice.AnnotationsTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="beforeSuite" finished-at="2023-06-19T09:57:08 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="beforeTest" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="beforeClass" finished-at="2023-06-19T09:57:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="beforeMethod" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testCase1()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="testCase1" finished-at="2023-06-19T09:57:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="afterMethod" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testCase2()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="testCase2" finished-at="2023-06-19T09:57:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase2 -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="beforeMethod" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="afterClass" finished-at="2023-06-19T09:57:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="afterMethod" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="afterTest" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestNGPractice.AnnotationsTest@7d20d0b]" started-at="2023-06-19T09:57:08 IST" name="afterSuite" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestNGPractice.AnnotationsTest -->
+      <class name="TestNGPractice.IgnoreTest">
+        <test-method signature="test1()[pri:0, instance:TestNGPractice.IgnoreTest@70325e14]" started-at="2023-06-19T09:57:08 IST" name="test1" finished-at="2023-06-19T09:57:08 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test3()[pri:0, instance:TestNGPractice.IgnoreTest@70325e14]" started-at="2023-06-19T09:57:08 IST" name="test3" finished-at="2023-06-19T09:57:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+      </class> <!-- TestNGPractice.IgnoreTest -->
+      <class name="TestNGPractice.ParameterizedTest">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:TestNGPractice.ParameterizedTest@37ceb1df]" started-at="2023-06-19T09:57:08 IST" name="browserTest" finished-at="2023-06-19T09:57:08 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by @Test on method browserTest but has not been marked @Optional or defined
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by @Test on method browserTest but has not been marked @Optional or defined
+
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserTest -->
+      </class> <!-- TestNGPractice.ParameterizedTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

@@ -1,0 +1,39 @@
+package UploadAndDownloadFiles;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+
+import java.io.File;
+
+import org.testng.annotations.Test;
+
+import io.restassured.response.Response;
+
+public class SingleFileUpload {
+	
+	@Test
+	public void singleFileUpload()
+	{
+		
+
+
+		File f = new File("C:\\Users\\$P42000-5CVKF7CNLE6V\\sandeep\\oneableSysAdmin\\Configuration\\Config.properties");
+
+				File f1 = new File("C:\\Users\\$P42000-5CVKF7CNLE6V\\sandeep\\oneableSysAdmin\\Configuration\\Config.properties");
+
+
+		 
+
+				   //RestAssured.baseURI = "http://dummy.com/";
+
+				        Response res = given()
+
+				                //.formParam("token", "eacca99696ac5")
+
+				                .multiPart("files", f)
+
+				                .multiPart("files", f1)
+
+		.when().post("https://petstore.swagger.io/v2/pet/9223372036854248000/uploadImage");
+
+}}

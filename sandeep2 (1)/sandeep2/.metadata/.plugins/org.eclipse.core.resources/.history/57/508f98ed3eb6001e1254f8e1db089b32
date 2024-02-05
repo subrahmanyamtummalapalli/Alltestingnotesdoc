@@ -1,0 +1,31 @@
+package com.tutorialsNinja.implementation;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+
+import com.tutorialsNinja.utilities.ReadConfig;
+
+public class BaseClass {
+	
+	ReadConfig rc=new ReadConfig();
+			
+	public String baseurl=rc.getUrl();
+	public String baseUsername=rc.getUsername();
+	public String basePwd=rc.getPassword();
+	
+	public WebDriver driver;
+	
+	
+	public void launchApp()
+	{
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(baseurl);
+		
+	}
+	
+	
+	
+
+}

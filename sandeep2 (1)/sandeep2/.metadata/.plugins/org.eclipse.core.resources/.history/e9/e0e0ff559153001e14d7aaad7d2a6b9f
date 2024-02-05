@@ -1,0 +1,16 @@
+package SwitchStatement;
+
+public class DaySelection {
+	
+	public static void day()
+	{
+		int day=4;
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

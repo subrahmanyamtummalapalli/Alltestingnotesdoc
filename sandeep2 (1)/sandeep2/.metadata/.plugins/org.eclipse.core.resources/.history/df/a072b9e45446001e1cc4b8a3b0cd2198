@@ -1,0 +1,19 @@
+package AllTopics;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import LaunchBrowser.LaunchBrowser;
+
+public class PrintLinks extends LaunchBrowser {
+
+	public static void main(String[] args) {
+		
+      List<WebElement> allLinks=driver.findElements(By.tagName("a"));
+      int countLinks=allLinks.size();
+      System.out.println(countLinks);
+	}
+
+}

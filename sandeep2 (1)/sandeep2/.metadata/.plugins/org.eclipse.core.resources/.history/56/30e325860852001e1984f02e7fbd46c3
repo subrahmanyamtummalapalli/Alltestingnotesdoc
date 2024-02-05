@@ -1,0 +1,28 @@
+package UploadAndDownloadFiles;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+
+import java.io.File;
+
+import org.testng.annotations.Test;
+
+public class SingleFileUpload {
+	
+	@Test
+	public void singleFileUpload()
+	{
+		
+		File f=new File("C:\\disk");
+		given()
+		    .multiPart("file",f)
+		    .contentType("multiPart/form-data")
+		
+		.when()
+		    .post("https://petstore.swagger.io/v2/pet/9223372036854248000/uploadImage")
+		.then()
+		    .statusCode(200)
+		    .log().all();
+	}
+
+}

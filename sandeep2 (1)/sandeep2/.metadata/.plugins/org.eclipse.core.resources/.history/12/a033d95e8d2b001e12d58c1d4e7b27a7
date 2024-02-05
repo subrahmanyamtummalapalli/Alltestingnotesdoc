@@ -1,0 +1,64 @@
+package com.oneable.testcases;
+
+import org.testng.Assert;
+//import org.testng.Assert;
+import org.testng.annotations.Test;
+//import com.oneable.pageobjects.LoginPage1;
+//import com.oneable.utility.Log4j;
+
+public class TC_LoginTest_001 extends BaseClass {
+	
+	ReusableMethods rm = new ReusableMethods();
+	//Log4j lg = new Log4j();
+
+	@Test()
+	public void VerifyLanguage() throws Exception {
+		com.oneable.pageObjects.LoginPage1 lp = new com.oneable.pageObjects.LoginPage1(driver);
+		lp.LanguageOption();
+	}
+
+	@Test()
+	public void LoginTestWithValidData() throws Exception {
+		
+		com.oneable.pageObjects.LoginPage1 lp = new com.oneable.pageObjects.LoginPage1(driver);
+        lp.LoginWithValidData(username, password);
+		//lg.info("Login with valid credentials");
+		Thread.sleep(3000);
+		if (driver.getTitle().equals("Oneable Workforce Planner")) {
+			Assert.assertTrue(true);
+		} else {
+			Assert.assertTrue(false);
+		}
+	}
+	
+	@Test
+	public void LoginTestWithInvalidUserName() throws Exception
+	{
+		com.oneable.pageObjects.LoginPage1 lp = new com.oneable.pageObjects.LoginPage1(driver);
+		lp.LoginWithInvalidUserName();
+	}
+	
+	
+	@Test
+	public void LoginTestWithValidUnameInvalidPwd() throws Exception
+	{
+		com.oneable.pageObjects.LoginPage1 lp = new com.oneable.pageObjects.LoginPage1(driver);
+		lp.LoginWithValidUnameInvalidPsw();	
+	}
+	
+	@Test
+	public void WithOutUsernameClickOnButton() throws Exception
+	{
+		com.oneable.pageObjects.LoginPage1 lp = new com.oneable.pageObjects.LoginPage1(driver);
+		Thread.sleep(2000);
+		lp.WithOutUnameClickOnBitton();
+	}
+	
+	@Test
+	public void VerifyWithUnameAndWithOutPwd() throws Exception
+	{
+		com.oneable.pageObjects.LoginPage1 lp = new com.oneable.pageObjects.LoginPage1(driver);
+		Thread.sleep(2000);
+		lp.ValidUnameAndWithOutPwd();
+	}
+}

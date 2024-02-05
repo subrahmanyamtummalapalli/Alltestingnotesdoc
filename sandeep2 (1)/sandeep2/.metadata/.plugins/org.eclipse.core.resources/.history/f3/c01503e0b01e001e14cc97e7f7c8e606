@@ -1,0 +1,60 @@
+package api.test;
+
+import org.json.JSONObject;
+import org.testng.Assert;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.github.javafaker.Faker;
+import com.google.gson.Gson;
+
+import api.endpoints.LoginEndPoint;
+
+import api.payload.User;
+import api.utilities.ReadConfig;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class Logintest {
+	@Test(priority=1)
+	public void createUser() {
+		ReadConfig rc = new ReadConfig();
+		User u = new User();		
+		u.setEmail(rc.email());
+		u.setPassword(rc.password());
+		
+		
+		String jsonInString = new Gson().toJson(u);
+		System.out.println("User Create Payload: " + jsonInString);
+		
+		LoginEndPoint lep = new LoginEndPoint();
+		
+		// create user
+		Response response=lep.addUser(rc.adduserurl(),jsonInString);
+		response.then().log().all();
+		Assert.assertEquals(response.statusCode(),200);
+		
+	}
+	
+	@Test(priority=2)
+	public void checkLogin() {		
+		// checking login
+		ReadConfig rc = new ReadConfig();
+		User u = new User();		
+		u.setEmail(rc.email());
+		u.setPassword(rc.password());
+		
+		
+		String jsonInString = new Gson().toJson(u);
+		System.out.println("User Check Payload: " + jsonInString);
+		
+		LoginEndPoint lep = new LoginEndPoint();
+		
+		
+		Response response=lep.loginUser(rc.loginuserurl(),jsonInString);
+		response.then().log().all();
+		Assert.assertEquals(response.statusCode(),200);
+	
+	}	
+}

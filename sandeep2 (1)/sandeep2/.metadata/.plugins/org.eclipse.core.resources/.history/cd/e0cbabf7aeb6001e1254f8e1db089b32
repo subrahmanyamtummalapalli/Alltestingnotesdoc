@@ -1,0 +1,26 @@
+package com.tutorialsNinja.implementation;
+
+import org.testng.annotations.Test;
+
+import com.tutorialsNinja.pageObjects.RegistrationPage;
+
+public class RegistrationImplementation extends BaseClass{
+	
+	@Test
+	public void register()
+	{
+		RegistrationPage rp=new RegistrationPage(driver);
+		rp.getMyAccount();
+		rp.getRegisterDetails();
+		rp.getFirstName("sandeep");
+		rp.getLastName("velpula");
+		rp.getEmail("sandeep2a@gmail.com");
+		rp.getTelephoneNum("1234567890");
+		rp.getPwd("sandeep2a");
+		rp.getCnfPwd("sandeep2a");
+		rp.getCheckBox();
+		rp.clickSubmit();
+	}
+
+}
+

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Built-By: $G22000-HBGC7AJ48B0G
+Build-Jdk: 17.0.1
+Created-By: Maven Integration for Eclipse
+

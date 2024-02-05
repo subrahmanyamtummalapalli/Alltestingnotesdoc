@@ -1,0 +1,288 @@
+1.System.setProperty("webdriver.chrome.driver","chrome path");
+2.WebDriver driver=new ChromeDriver();   ****Launch Browser****
+
+3.driver.get("http://www.fb.com");      ****open url****
+        (or)
+  driver.navigate().to("http://www.fb.com");     **open url***
+
+4.driver.close();                       ***close current window***
+
+5.driver.quite();                       ***close all windows****
+
+6.String s=driver.getPageSource();      ****to get pagesource***
+
+7.String s1=driver.getCurrentUrl();      ***to open current url***
+
+8.String s2=driver.getTitle();           ***to get title***
+9.System.out.println(s); 
+
+10.Set<String> wb=driver.getWindowHandles();   ***address of multiple windows***
+
+11.String p=driver.getWindowHandle();          ***address of current window****
+         
+12.String fn=driver.findElement(By.locator(""));   ***single web element***
+
+13.List<WebElement> wb1=driver.findElements(By.locator(""));   ***multiple web elements***
+
+14.driver.switchTo().window();            ***switch to parent window***         
+
+15.driver.navigate().refresh();           ***refresh page****
+
+16.driver.navigate().forward();           ***move to next page***
+ 
+17.driver.navigate().back();              ***move to previous page***        
+
+18.Dimension d1=new Dimension(50,50);
+   driver.manage().window().setSize(d1);   ***set dimesion***
+ 
+19.driver.manage().timeouts().implicitlyWait(time,TimeUnit.SECONDS);  *****IMPLICITY WAIT****
+
+20.WebDriverWait wait=new WebDriverWait(reference(driver),3000);      *****EXPLICITY WAIT****
+   wait.until(ExpectedConditions.visibilityOfElementLocated(By.locator("")))); 
+ 
+21.FluentWait wait=new FluentWait(webdriver Reference(driver));       *****FLUENT WAIT*****
+   wait.withTimeout(5000,TimeUnit.MILLISECONDS);
+   wait.pollingEvery(250,TimeUnit.MILLISECONDS);
+   wait.until(ExpectedConditions.alertIsPresent);
+
+22.driver.manage().timeouts().pageLoadTimeOut(time,SECONDS);          ******PAGELOADTIMEOUT****
+
+23.thread.sleep(1000);                                                *****THREADSLEEP*****
+
+24.driver.switchTo().alert().accept(); //void                         ***to click on OK button***
+
+25.driver.switchTo().alert().dismiss(); //void                        ***to click on Cancel Button***
+
+26.driver.switchTo().alert().sendKeys();  //void                      ***to send data***
+
+27.driver.switchTo().alert().getText();  //String                     ****to retrive text from alerts****
+
+28.Assert.assertEquals(ExpectedTitle,ActualTitle);   
+   Assert.assertNotEquals(ExpectedTitle,ActulaTitle);
+   Assert.assertTrue(verifytitle);
+   Assert.assertFalse(verifytitle);
+   Assert.assertNull();
+   Assert.assertNotNull();                                          ***hard asserts***
+
+29.SoftAssert sf=new SoftAssert();                                  **soft asserts***                             
+   sf.assertEquals(ExpectedTitle,ActualTitle);
+   sf.assertNotEquals(ExpectedTitle,ActualTitle);
+   sf.assertTrue();
+   sf.assertFalse();
+   sf.assertNull();
+   sf.assertNotNull();
+
+30.TakesScreenshot ts=(TakesScreenshot) driver;                      ***screenshot***
+  File login=ts.getScreenshotAs(OutputType.FILE);
+  Files.copy(login,new File("path"))
+
+31.File src=new File("file path");                                  ***read data***
+   FileInputStream fis=new FileInputStream(src);
+   XSSFWorkBook wb=new XSSFWorkBook(fis);
+   XSSFSheet sheet=wb.getSheetAt(0);
+   int rc=sheet.getLastRowNum();
+   System.out.println(rc);
+   for(int i=0;i<=rc;i++){
+ String un=sheet.getRow(i).getCell(0).getStringCellValue();
+ String pwd=sheet.getRow(i).getCell(1).getStringCellValue()
+}  
+
+31.File src=new File("file path");                                   ***write***
+   FileInputStream fis=new FileInputStream(src);
+   XSSFWorkbook wb=new XSSFWorkbook(fis);
+   XSSFSheet sheet=wb.getSheetAt(0);
+   sheet.getRow(0).createCell(1).setCellValue("anusha");
+   sheet.getRow(1).createCell(1).setCellValue("anu");
+   FileOutputStream fos=new FileOutPutStream(src);
+   wb.write(fos);
+   wb.close();
+
+32.int s=driver.findElements(By.tagName("iframe"));                    ***No of frames***
+   System.out.println(s);
+
+
+33.List<WebElement> links=driver.findElement(By.tagName("a"));         ***No of links***
+   int s=links.size();
+   System.out.println(s)
+
+34.WebElement wb=driver.findElement(By.name("location"));
+   Select s1=new Select(wb);
+   List<WebElement> a1=s1.getOptions();
+   int listbox=a1.size();
+   System.out.println(listbox);                                        ***no of options in listbox***
+   for(int i=1;i<a1.size();i++){
+   String str=a1.get(i).getText();                                     ***retrive options***
+   System.out.println(str);     
+}
+  s1.selectByIndex();
+  s1.selectByVisibileText();
+  s1.selectByValue();                                                 ***select option from dropdown***
+
+35.driver.manage().window().maximize();                               ***maximize window***
+
+36.driver.manage().window.minimize();                                 ***minimize window***
+
+37.JavascriptExecutor js=(JavascriptExecutor) driver;
+   js.execute("window.scrollBy(0,600)");                                
+
+38.Actions a=new Actions(driver);
+   a.clickAndHold(driver.findElement(By.locator("draggable"))).moveToElement(driver.findElement(By.locator("droppable"))).release().build().perform();
+ ----https://jqueryui.com/droppable/---                              ***drag and drop***
+
+
+39.Actions a=new Actions(driver);
+   WebElement wb=driver.findElement(By.locator("username"));
+   wb.sendKeys("anusha");
+   a.doubleClick(wb).build().perform();                              ***doubleClick***
+
+40.Actions a=new Actions(driver);
+   WebElement wb=driver.findElement(By.locator("username"));
+   a.contextClick(wb).build().perform();                             ***Right click***
+
+41.XPATHS
+
+ >>   //tagName[@attribute name='value']                                  ***relative xpath***
+
+ >>   //tagName[@attribute name='value' or @attribute name='value']        ***using or***
+
+ >>   //tagName[@attribute name='value' and @attribute name='value']       ***using and***
+ 
+ >>   //tagName[@attribute name='value']//following::tagName[@attribute name='value']  ***using following xpath***
+ 
+ >>   //tagName[@attribute name='value']//preceding::tagName[@attribute name='value']  ***using preceding xpath***
+
+ >>   //tagName[@attribute name='value']/following-sibling::tagName/child::tagName      ***sibling xpath***      
+ 
+ >>   //tagName[@attribute name='value']/preceding-sibling::tagName
+ 
+ >>   //tagName/child::tagName[@attribute='value']      or   //tagName[@attributename='value']//child::tagName[1]              ***child***
+ 
+ >>   //tagName[@attribute name='value']/parent::tagName/child::tagName    or   //tagName[@attributename='value']//parent::tagName            ***parent***
+
+ >>   //tagName[contains(@attribute name,'value')]                                      ***contains method***
+         
+ >>   //tagName[contains(text(),'value')]                                               ***contains method for links***
+ 
+ >>   //tagName[starts-with(@attribute name,'value')]                                  ***starts-with method***
+
+ >>   //tagName[starts-with(text(),'value')]                                           ***starts-with method for link***
+
+ >>   //tagName[text()="value"]                                                        ***for links***
+
+ >>   //tagName[@attributeName='value']//self::tagName                                 ***self***
+
+ >>   ChromeOptions options=new ChromeOptions();
+      options.addArguments("--disable-notifications");
+      System.setProperty("webdriver.chrome.driver","chrome path");
+      WebDriver driver=new ChromeDriver(options);                                      ***window notification***
+
+
+42.@BeforeSuite
+   @BeforeTest
+   @BeforeClass
+   @BeforeMethod
+   @Test
+   @AfterMethod
+   @AfterClass
+   @AfterTest
+   @AfterSuite
+   @Test(invocationCount=1)
+   @DataProvider(name=" ")
+   @Parameters({"name","searchkey"})
+    
+43.<suite name="suite" parallel="Tests">            ***parallel execution of different classes***
+   <test thread-count="5" name="test1">
+   <classes>
+   <class name="package.classname"/>
+   </classes>
+   </test>
+   <test thread-count="5"name="test2">
+   <classes>
+   <class name="packagename.classname">
+   </classes>
+   </test>
+   </suite>
+
+44.<suite name="suite" parallel="tests">           ***parallel execution in different browsers***                         
+   <test thread-count="5" name="test1">
+   <parameter name="browser" value="chrome">
+   </parameter>
+   <classes>
+   <class name="packagename.classname"/>
+   </classes>
+   </test>
+   <test thread-count="5" name=="test2">
+   <parameter name="browser" value="firefox"/>
+   </classes>
+   </test>
+   </suite>
+
+45.<suite name="suite">                            ***execution in multiple groups***
+   <test thread-count="5" name="test1">
+   <group>
+   <run>
+   <include name="sanity">
+   </include>
+   </run>
+   </group>
+   <classes>
+   <class name="packagename.classname"/>
+   </classes>
+   </test>
+   <test thread-count="5" name="test2">
+   <group>
+   <run>
+   <include name="smoke">
+   </include>
+   </run>
+   </group>
+   <classes>
+   <classes name="packagename.classname"/>
+   </classes>
+   </test>
+   </suite>
+
+
+46.<suite name="suite">                             ***if we want to execute particular methods***
+   <test thread-count="3" name="test1">
+   <classes>
+   <methods>
+   <class name="packagename.classname"/>
+   <include name="methodname">  <exclude name="method name">
+   </include>
+   </methods>
+   </classes>
+   </test>
+   </suite>
+
+47.driver.get(driver.getCurrentURL());
+   driver.navigate.to(driver.getCurrentURL());
+   driver. findElement(By.id("username")).sendKeys(Keys.F5);
+   driver. findElement(By.id("username")).sendKeys(“\uE035”);            ***refresh page***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                              

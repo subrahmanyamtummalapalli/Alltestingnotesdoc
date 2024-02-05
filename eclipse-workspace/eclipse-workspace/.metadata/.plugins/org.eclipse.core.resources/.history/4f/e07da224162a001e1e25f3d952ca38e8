@@ -1,0 +1,12 @@
+package FailedSCTest;
+
+import org.testng.annotations.Listeners;
+
+@Listeners(CustomListeners.class)
+public class TestRun extends ReusableMethods {
+
+	public void setUp()
+	{
+		launchBrowser();
+	}
+}

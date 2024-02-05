@@ -1,0 +1,42 @@
+package ListenersTest;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+
+Listeners(CustomListeners.class)
+public class RunUsingListeners  {
+	
+	public static WebDriver driver;
+
+	public void launch()	
+	{
+		WebDriverManager.chromedriver().setup();
+	    driver = new ChromeDriver();
+	    driver.manage().window().maximize();
+	    driver.get("https://adactinhotelapp.com/");
+	    System.out.println("Chrome successfully launched");
+	}
+	
+	public void quit()
+	{
+		driver.quit();
+	}
+	
+	public void sc1()
+	{
+		Assert.assertEquals(true, false);
+	}
+	
+	public void sc2()
+	{
+		Assert.assertEquals(true, true);
+	}
+	
+	public void sc3()
+	{
+		Assert.assertEquals(true, false);
+	}
+	
+}

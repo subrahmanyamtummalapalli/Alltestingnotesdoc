@@ -1,0 +1,10 @@
+package methods;
+
+class CallToSuper {
+	
+	public static void sup(String name)
+	{
+		System.out.println(name);
+	}
+
+}

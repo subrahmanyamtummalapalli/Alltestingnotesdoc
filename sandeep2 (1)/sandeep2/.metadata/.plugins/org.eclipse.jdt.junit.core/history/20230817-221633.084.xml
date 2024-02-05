@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (3)" project="presentation" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.Runner.TestRunner" time="5.415">
+    <testsuite name="login functionality" time="5.415">
+      <testcase name="with valid data" classname="login functionality" time="5.415"/>
+    </testsuite>
+  </testsuite>
+</testrun>

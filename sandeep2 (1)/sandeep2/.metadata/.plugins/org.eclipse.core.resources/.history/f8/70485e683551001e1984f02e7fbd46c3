@@ -1,0 +1,10 @@
+package restAssured1;
+
+public class PathAndQueryParameters {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

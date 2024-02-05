@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-22T10:33:28 IST" name="Default suite" finished-at="2024-01-22T10:34:35 IST" duration-ms="67043">
+    <groups>
+    </groups>
+    <test started-at="2024-01-22T10:33:28 IST" name="Default test" finished-at="2024-01-22T10:34:35 IST" duration-ms="67043">
+      <class name="com.tutorialsNinja.implementation.MyAccountImplementation">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.tutorialsNinja.implementation.MyAccountImplementation@32502377]" started-at="2024-01-22T10:33:28 IST" name="launchApp" finished-at="2024-01-22T10:33:36 IST" duration-ms="8425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="register()[pri:1, instance:com.tutorialsNinja.implementation.MyAccountImplementation@32502377]" started-at="2024-01-22T10:33:36 IST" name="register" finished-at="2024-01-22T10:33:57 IST" duration-ms="20627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method signature="login()[pri:2, instance:com.tutorialsNinja.implementation.MyAccountImplementation@32502377]" started-at="2024-01-22T10:33:57 IST" name="login" finished-at="2024-01-22T10:34:06 IST" duration-ms="9201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="muAccount()[pri:3, instance:com.tutorialsNinja.implementation.MyAccountImplementation@32502377]" started-at="2024-01-22T10:34:06 IST" name="muAccount" finished-at="2024-01-22T10:34:35 IST" duration-ms="28720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- muAccount -->
+      </class> <!-- com.tutorialsNinja.implementation.MyAccountImplementation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

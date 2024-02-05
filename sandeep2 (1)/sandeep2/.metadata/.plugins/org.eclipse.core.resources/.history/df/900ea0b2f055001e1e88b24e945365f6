@@ -1,0 +1,13 @@
+package SerializationAndDeSerialization;
+
+import org.testng.annotations.Test;
+
+public class SerializationExample {
+	
+	@Test
+	public void serial()
+	{
+		
+	}
+
+}

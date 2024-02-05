@@ -1,0 +1,22 @@
+package api.test;
+
+import org.testng.annotations.Test;
+
+import api.payload.User;
+import api.utilities.DataProviders;
+
+public class DDtTest {
+	@Test(priority=1,dataProvider="data",dataProviderClass=DataProviders.class)
+	public void postUser(String uid,String uname,String fname,String lname,String pwd,String email,String phn)
+	{
+		User u=new User();
+		u.setId(Integer.parseInt(uid));
+		u.setUsername(uname);
+		u.setFirstName(fname);
+		u.setLastName(lname);
+		u.setEmail(email);
+		u.setPassword(pwd);
+		u.setPhone(Integer.parseInt(phn));
+	}
+
+}

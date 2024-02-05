@@ -1,0 +1,27 @@
+String str="Radar";
+reverseStr="";
+int StrLength=str.length();
+for(int i=(StrLength-1;i>0;--i)
+reverseStr=reversedStr+str.chartAt(i);
+if(str.toLowersCase.equals(reverseStr.toLowerscase())
+sop(str+"prld")
+else
+sop(str+"not prd")
+
+
+1.string
+2.reverseStr
+3.str.length
+4.logic
+5.revereseStr+str.charAt()
+6.if
+7else
+
+
+
+agu 2019 to agu 2020
+ agu    2020 to 2021
+  agus  2021 to 2022
+
+Why is Maven needed?
+Maven provides project information (log document, dependency list, unit test reports etc.) Maven is very helpful for a project while updating central repository of JARs and other dependencies. With the help of Maven we can build any number of projects into output types like the JAR, WAR etc without doing any scripting.29-Jun-2022

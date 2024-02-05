@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test1">
+  <groups>
+  <run>
+  <include name="sanity">
+  <classes>
+      <class name="grouplavelpacage.Group"/>
+    </classes>
+  </include>
+  </run>
+  </groups>
+  </test> <!-- Test -->
+  <test name="test2">
+  <groups>
+  <run>
+  <include name="smoke">
+  <classes>
+  <class name="grouplavelpacage.Group"></class>
+  </classes>
+  </include>
+  
+  </run>
+  </groups>
+  
+  </test>
+</suite> <!-- Suite -->
+

@@ -1,0 +1,32 @@
+package day1;
+import static io.restassured.RestAssured.*;
+
+import java.util.Map;
+
+import org.testng.annotations.Test;
+
+import io.restassured.response.Response;
+
+public class Cookies {
+@Test
+void testCoolies()
+{
+	given()
+	
+	
+	
+	.when()
+	
+	 .get("https://www.google.com/")
+	
+	.then()
+	.cookie("AEC","Ad49MVGubCelAGrIBJhdr2Oc-4yLheli8C5z9WU23wMf319ZiHhWGtguoA")
+	.log().all();
+	
+//	Response res=given()
+//			.when()
+//			.get("https://www.google.com/");
+//			Map<String, String>  ck=res.getCookies();
+//			System.out.println(ck);
+}
+}

@@ -1,0 +1,5 @@
+package com.tutorialsNinja.pageObjects;
+
+public class RegistrationPage {
+
+}

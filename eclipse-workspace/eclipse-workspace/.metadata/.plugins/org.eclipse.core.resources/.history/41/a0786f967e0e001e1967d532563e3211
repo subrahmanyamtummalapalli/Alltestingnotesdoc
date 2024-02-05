@@ -1,0 +1,10 @@
+package AndroidTest;
+
+public class IndiaMartTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

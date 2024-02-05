@@ -1,0 +1,22 @@
+package OOPS;
+
+public class AbstractionClass1 extends AbstractionClass {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	@Override
+	public void abs() {
+		System.out.println("sweety");
+		
+	}
+
+	@Override
+	public void xyz() {
+		System.out.println("akki");
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.oneable.testcases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.oneable.pageobjects.LoginPage1;
+import com.oneable.pageobjects.MachineListGaragePage2;
+import com.oneable.utility.Log4j;
+
+public class Tc_MachineLIstGarage_002 extends BaseClass {
+	@Test
+	public void machinelist() throws Exception {
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Log4j lg = new Log4j();
+		LoginPage1 lp = new LoginPage1(driver);
+		lp.LoginWithValidData(username, password);
+		lg.info("Login with valid credentials");
+		
+		Thread.sleep(2000);
+		MachineListGaragePage2 mlg = new MachineListGaragePage2(driver);
+		boolean countmachine = mlg.countmachine();
+		Assert.assertTrue(countmachine);
+		
+		mlg.clickOnSearch();
+		lg.info("Click on search box");
+		
+	}
+
+}

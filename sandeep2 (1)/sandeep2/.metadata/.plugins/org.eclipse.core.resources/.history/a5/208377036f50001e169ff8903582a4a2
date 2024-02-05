@@ -1,0 +1,6 @@
+
+public class Pojo {
+	String name;
+	int age;
+
+}

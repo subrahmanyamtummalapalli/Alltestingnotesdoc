@@ -1,0 +1,18 @@
+package FileUploadAndDownLoad;
+
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+
+import java.io.File;
+
+public class SingleFileUpload {
+	
+	@Test
+	public void singleFileUpload()
+	{
+		File f=new File("");
+	}
+
+}

@@ -1,0 +1,39 @@
+package day1;
+
+import static io.restassured.RestAssured.*;
+//import io.restassured.matcher.ResponseAwareMatcher;
+//import  static io.restassured.matcher.RestAssuredMatchers.*;
+//import  io.restassured.response.Response;
+import static org.hamcrest.Matchers.*;
+import java.util.HashMap;
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
+
+public class HttpRequests {
+
+	int id;
+
+	@Test(priority = 1)
+	public void getusers() {
+
+		given()
+
+				.when().get("https://reqres.in/api/users?page=2").then().statusCode(200).body("page", equalTo(2)).log()
+				.all();
+
+	}
+
+@Test(priority=2)
+void createUser() {
+	   HashMap data=new HashMap();
+	   data.put("name", "sandeep");
+	   data.put("loc", "singarayakonda");
+	   
+	   
+	   given()
+	   .body(data)
+	   .when()
+	    .post("https://reqres.in/api/users").jsonPath().getInt("id");
+}
+	
+}

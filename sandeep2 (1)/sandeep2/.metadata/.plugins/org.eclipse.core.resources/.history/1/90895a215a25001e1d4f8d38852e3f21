@@ -1,0 +1,55 @@
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class CucumberClass {
+
+	static WebDriver driver;
+	
+	@Given("user navigates to registration page")
+	public void user_navigates_to_registration_page() {
+		driver=new ChromeDriver();
+		driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
+		driver.manage().window().maximize();
+		
+	    
+	}
+
+	@When("user enters below details")
+	public void user_enters_below_details(DataTable data) {
+	    Map<String, String> info = data.asMap(String.class,String.class);
+	    driver.findElement(By.name("firstname")).sendKeys(info.get("firstname"));
+	    driver.findElement(By.name("lastname")).sendKeys(info.get("lastname"));
+	    driver.findElement(By.name("email")).sendKeys(info.get("email"));
+	    driver.findElement(By.name("telephone")).sendKeys(info.get("telephone"));
+	    driver.findElement(By.name("password")).sendKeys(info.get("password"));
+	    driver.findElement(By.name("confirm")).sendKeys(info.get("confirm"));
+	    
+	}
+
+	@And("clicks on privacy policy checkbox")
+	public void clicks_on_privacy_policy_checkbox() {
+	    driver.findElement(By.name("agree")).click();
+	}
+
+	@And("clicks on continue butto")
+	public void clicks_on_continue_button() {
+		driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[2]")).click();
+	}
+
+	@Then("user registered into account successfully message should be displayed")
+	public void user_registered_into_account_successfully_message_should_be_displayed() {
+	    driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/a")).click();
+	}
+
+
+
+}

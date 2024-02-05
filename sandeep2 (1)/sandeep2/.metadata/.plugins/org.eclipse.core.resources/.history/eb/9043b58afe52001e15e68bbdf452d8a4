@@ -1,0 +1,10 @@
+package whileLoopPrograms;
+
+public class Print30Nums {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,26 @@
+package CookiesAndHeaders;
+
+import org.testng.annotations.Test;
+
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+
+import java.util.Map;
+
+public class CookiesInfo {
+	
+	@Test
+	public void getCookie()
+	{
+		Response res=given()
+		
+		.when()
+		  .get("https://www.google.com/");
+		
+		Map<String, String> All_Cookies = res.getCookies();
+		System.out.println(All_Cookies.keySet());
+	}
+
+}

@@ -1,0 +1,57 @@
+package TestnGTopics;
+
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class FlagsOfTestNG {
+	
+	@Test(priority=1)
+	public void test1()
+	{
+		Reporter.log("test1",true);
+	}
+	
+	
+	@Test(priority=2,enabled=false)
+	public void test2()
+	{
+		Reporter.log("test2", true);
+	}
+	
+	@Test(priority=3,invocationCount = 5)
+	public void test3()
+	{
+		Reporter.log("test3", true);
+	}
+	
+	@Test(priority=4,dependsOnMethods= {"test1","test3"})
+	public void test4()
+	{
+		Reporter.log("test4", true);
+	}
+	
+	@Test(priority=5)
+	public void test5()
+	{
+       Reporter.log("test5",true);
+       Assert.fail();
+	}
+	
+	@Test(priority=6)
+	public void test6()
+	{
+       Reporter.log("test6",true);
+       Assert.assertTrue(false);
+	}
+	
+	@Test(priority=7)
+	public void test7()
+	{
+       Reporter.log("test7",true);
+       Assert.assertFalse(true);
+	}
+	
+	
+
+}

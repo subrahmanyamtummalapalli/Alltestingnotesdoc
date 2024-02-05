@@ -1,0 +1,26 @@
+package com.oneable.testcases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.testng.annotations.Test;
+
+import com.oneable.pageobjects.LoginPage1;
+import com.oneable.pageobjects.MachineAllocationModule4;
+import com.oneable.utility.Log4j;
+
+public class TC_MachineAllocationModule_004 extends BaseClass
+{
+	@Test
+	public void MachineAllocate() throws Exception
+	{
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		Log4j lg=new Log4j();
+		LoginPage1 lp=new LoginPage1(driver);
+		lp.LoginWithValidData(username, password);
+		lg.info("Login with valid credentials");
+		Thread.sleep(2000);
+		
+		MachineAllocationModule4 ma=new MachineAllocationModule4(driver);
+		ma.ClickOnMachineAllocation();	
+	}
+}

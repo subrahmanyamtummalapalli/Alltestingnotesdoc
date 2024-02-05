@@ -1,0 +1,10 @@
+package conditionalStatements;
+
+public class GreattestOf3Nums {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.tutorialsNinja.utilities;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.Test;
+
+public class ReadConfig {
+	
+	Properties pro;
+	
+	@Test
+	public void getProperties()
+	{
+		try {
+			File f=new File("./configuration/config.properties");
+			FileInputStream fis=new FileInputStream(f);
+			pro=new Properties();
+			pro.load(fis);
+		} catch (Exception e) {
+			System.out.println("exception catched");
+			e.printStackTrace();
+		}
+			
+			
+		
+	}
+
+}
